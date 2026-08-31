@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="960" viewBox="0 0 1280 960" fill="none" font-family="'Inter', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="bgGlow" cx="18%" cy="12%" r="80%">
+      <stop offset="0%" stop-color="#f2903c" stop-opacity="0.20"/>
+      <stop offset="45%" stop-color="#f2903c" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#f2903c" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bgGlow2" cx="88%" cy="92%" r="70%">
+      <stop offset="0%" stop-color="#7c5cff" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#7c5cff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff9d4d"/>
+      <stop offset="100%" stop-color="#f2742a"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f2742a"/>
+      <stop offset="100%" stop-color="#ffb15e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="960" fill="#0e0f13"/>
+  <rect width="1280" height="960" fill="url(#bgGlow)"/>
+  <rect width="1280" height="960" fill="url(#bgGlow2)"/>
+
+  <!-- App window -->
+  <rect x="96" y="104" width="1088" height="752" rx="22" fill="#16171d" stroke="#ffffff" stroke-opacity="0.09"/>
+
+  <!-- Title bar -->
+  <circle cx="130" cy="140" r="7" fill="#ff5f57"/>
+  <circle cx="156" cy="140" r="7" fill="#febc2e"/>
+  <circle cx="182" cy="140" r="7" fill="#28c840"/>
+  <text x="222" y="146" fill="#e8e8ea" font-size="20" font-weight="600">Pull Request · Automated Review</text>
+  <rect x="922" y="123" width="238" height="34" rx="17" fill="#f2903c" fill-opacity="0.12" stroke="#f2903c" stroke-opacity="0.5"/>
+  <text x="1041" y="145" fill="#ffab5e" font-size="15" font-weight="600" text-anchor="middle" font-family="ui-monospace, monospace">feat/auth  →  main</text>
+  <line x1="96" y1="176" x2="1184" y2="176" stroke="#ffffff" stroke-opacity="0.07"/>
+
+  <!-- LEFT: diff panel -->
+  <text x="128" y="222" fill="#9aa0aa" font-size="16" font-weight="500" font-family="ui-monospace, monospace">src/auth/login.ts</text>
+  <text x="640" y="222" fill="#7ee2a8" font-size="15" font-weight="600" font-family="ui-monospace, monospace">+3</text>
+  <text x="688" y="222" fill="#ff8a8a" font-size="15" font-weight="600" font-family="ui-monospace, monospace">−1</text>
+  <line x1="128" y1="240" x2="712" y2="240" stroke="#ffffff" stroke-opacity="0.06"/>
+
+  <!-- diff rows -->
+  <g font-family="ui-monospace, monospace" font-size="16">
+    <!-- context -->
+    <text x="170" y="286" fill="#565b66" text-anchor="end">18</text>
+    <text x="188" y="286" fill="#c9ccd3">function login(user, pw) {</text>
+
+    <!-- removed -->
+    <rect x="124" y="300" width="588" height="32" rx="6" fill="#ff5a5a" fill-opacity="0.11"/>
+    <text x="140" y="323" fill="#ff8a8a" font-weight="700">−</text>
+    <text x="170" y="323" fill="#565b66" text-anchor="end">19</text>
+    <text x="188" y="323" fill="#ff9d9d">  const token = md5(pw)</text>
+
+    <!-- added -->
+    <rect x="124" y="338" width="588" height="32" rx="6" fill="#28c840" fill-opacity="0.11"/>
+    <text x="140" y="361" fill="#7ee2a8" font-weight="700">+</text>
+    <text x="170" y="361" fill="#565b66" text-anchor="end">19</text>
+    <text x="188" y="361" fill="#9be9bd">  const token = bcrypt(pw)</text>
+
+    <!-- added -->
+    <rect x="124" y="376" width="588" height="32" rx="6" fill="#28c840" fill-opacity="0.11"/>
+    <text x="140" y="399" fill="#7ee2a8" font-weight="700">+</text>
+    <text x="170" y="399" fill="#565b66" text-anchor="end">20</text>
+    <text x="188" y="399" fill="#9be9bd">  await audit.log(user.id)</text>
+
+    <!-- context -->
+    <text x="170" y="437" fill="#565b66" text-anchor="end">21</text>
+    <text x="188" y="437" fill="#c9ccd3">  return token</text>
+    <text x="170" y="474" fill="#565b66" text-anchor="end">22</text>
+    <text x="188" y="474" fill="#c9ccd3">{'}'}</text>
+  </g>
+
+  <!-- context / RAG pipeline chips -->
+  <text x="128" y="556" fill="#6b7078" font-size="13" font-weight="600" letter-spacing="2">ANALYSIS PIPELINE</text>
+  <g font-size="14" font-weight="500">
+    <rect x="124" y="574" width="132" height="34" rx="17" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+    <text x="190" y="596" fill="#c9ccd3" text-anchor="middle">Fine-tuned LLM</text>
+    <rect x="268" y="574" width="150" height="34" rx="17" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+    <text x="343" y="596" fill="#c9ccd3" text-anchor="middle">RAG retrieval</text>
+    <rect x="430" y="574" width="160" height="34" rx="17" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+    <text x="510" y="596" fill="#c9ccd3" text-anchor="middle">Diff embeddings</text>
+  </g>
+
+  <!-- RIGHT: AI review card -->
+  <rect x="744" y="200" width="416" height="576" rx="18" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.09"/>
+
+  <!-- header -->
+  <circle cx="784" cy="248" r="21" fill="url(#orange)"/>
+  <path d="M784 236 l3.5 7.5 L795 247 l-7.5 3.5 L784 258 l-3.5 -7.5 L773 247 l7.5 -3.5 Z" fill="#0e0f13"/>
+  <text x="818" y="243" fill="#ffffff" font-size="19" font-weight="700">AI Review</text>
+  <text x="818" y="265" fill="#8b909a" font-size="13">Senior-engineer level analysis</text>
+
+  <!-- verdict pill -->
+  <rect x="768" y="292" width="220" height="34" rx="17" fill="#ffb43c" fill-opacity="0.14" stroke="#ffb43c" stroke-opacity="0.5"/>
+  <circle cx="789" cy="309" r="4" fill="#ffb43c"/>
+  <text x="802" y="314" fill="#ffca7a" font-size="14" font-weight="600">Changes requested</text>
+
+  <!-- comments -->
+  <g>
+    <circle cx="778" cy="372" r="3.5" fill="#f2903c"/>
+    <text x="796" y="377" fill="#d4d7dd" font-size="15">Avoid MD5 — use a salted hash.</text>
+    <line x1="768" y1="398" x2="1136" y2="398" stroke="#ffffff" stroke-opacity="0.06"/>
+
+    <circle cx="778" cy="430" r="3.5" fill="#f2903c"/>
+    <text x="796" y="435" fill="#d4d7dd" font-size="15">Add rate limiting to /login.</text>
+    <line x1="768" y1="456" x2="1136" y2="456" stroke="#ffffff" stroke-opacity="0.06"/>
+
+    <circle cx="778" cy="488" r="3.5" fill="#7ee2a8"/>
+    <text x="796" y="493" fill="#d4d7dd" font-size="15">Good: audit logging added.</text>
+    <line x1="768" y1="514" x2="1136" y2="514" stroke="#ffffff" stroke-opacity="0.06"/>
+
+    <circle cx="778" cy="546" r="3.5" fill="#f2903c"/>
+    <text x="796" y="551" fill="#d4d7dd" font-size="15">Cover the new path with a test.</text>
+  </g>
+
+  <!-- confidence -->
+  <text x="768" y="638" fill="#8b909a" font-size="13" font-weight="600" letter-spacing="1.5">CONFIDENCE</text>
+  <text x="1136" y="638" fill="#ffab5e" font-size="15" font-weight="700" text-anchor="end">92%</text>
+  <rect x="768" y="650" width="368" height="9" rx="4.5" fill="#ffffff" fill-opacity="0.08"/>
+  <rect x="768" y="650" width="339" height="9" rx="4.5" fill="url(#bar)"/>
+
+  <!-- action buttons -->
+  <rect x="768" y="700" width="176" height="44" rx="12" fill="url(#orange)"/>
+  <text x="856" y="728" fill="#0e0f13" font-size="15" font-weight="700" text-anchor="middle">Post review</text>
+  <rect x="960" y="700" width="176" height="44" rx="12" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.12"/>
+  <text x="1048" y="728" fill="#d4d7dd" font-size="15" font-weight="600" text-anchor="middle">Dismiss</text>
+</svg>
