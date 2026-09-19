@@ -100,7 +100,7 @@ export function Hero() {
 
       <motion.div
         style={{ scale, opacity, y }}
-        className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 lg:grid-cols-12 gap-12 px-6 md:px-10 pt-20 pb-20 items-center"
+        className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 lg:grid-cols-12 gap-12 px-6 md:px-10 pt-4 pb-20 items-center"
       >
         <div className="lg:col-span-7 space-y-7 text-left">
           {/* Subheading Badge */}

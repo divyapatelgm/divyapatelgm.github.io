@@ -64,9 +64,9 @@ const projects: Project[] = [
     tags: ["React.js", "Node.js", "Express.js", "MongoDB", "Gemini API"],
     description:
       "An AI platform for translating, optimizing and explaining code across languages. Monaco Editor powers real-time editing, JWT and Google OAuth secure the REST APIs, and analysis is driven by the Gemini API.",
-    liveLink: "https://github.com/divyapatelgm/smart-code-translater",
+    liveLink: "https://smart-code-translater-nine.vercel.app/",
     liveLabel: "View Project",
-    githubLink: profile,
+    githubLink: "https://github.com/divyapatelgm/smart-code-translater",
   },
   {
     no: "04",
@@ -91,7 +91,7 @@ const projects: Project[] = [
       "The department's interactive home - academic programs, faculty and research presented through dynamic, fully responsive React components.",
     liveLink: "https://gmuaiml.pages.dev/",
     liveLabel: "View Project",
-    githubLink: profile,
+    githubLink: "https://github.com/divyapatelgm/aiml-branch-website",
   },
 ];
 
