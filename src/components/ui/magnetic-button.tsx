@@ -7,6 +7,7 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   href?: string;
   target?: string;
   rel?: string;
+  download?: boolean | string;
 }
 
 export function MagneticButton({
@@ -17,6 +18,7 @@ export function MagneticButton({
   href,
   target,
   rel,
+  download,
   ...rest
 }: Props) {
   const ref = useRef<HTMLElement>(null);
@@ -54,6 +56,7 @@ export function MagneticButton({
         href={href}
         target={target}
         rel={rel}
+        download={download}
         onMouseMove={onMove}
         onMouseLeave={onLeave}
         className={`${base} ${styles} ${className}`}
