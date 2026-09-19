@@ -17,7 +17,7 @@ export function Contact() {
 
     const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY as string | undefined;
 
-    // Fallback: no key configured yet — hand off to the visitor's mail client so
+    // Fallback: no key configured yet - hand off to the visitor's mail client so
     // the message is never silently lost, and nudge the owner to set the key.
     if (!accessKey) {
       console.warn(
@@ -105,7 +105,7 @@ export function Contact() {
           {/* Side Info Column */}
           <div className="lg:col-span-5 space-y-6">
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-md">
-              I'm open to full-time roles, software internships, and freelance collaborations —
+              I'm open to full-time roles, software internships, and freelance collaborations -
               and always happy to talk tech stacks, AI and thoughtful UX. Let's connect.
             </p>
 
@@ -123,6 +123,18 @@ export function Contact() {
                 value="github.com/divyapatelgm"
                 href="https://github.com/divyapatelgm"
               />
+            </div>
+
+            <div className="pt-2">
+              <MagneticButton
+                as="a"
+                href="/RESUME.pdf"
+                download
+                variant="secondary"
+                className="w-full sm:w-auto"
+              >
+                Download Resume
+              </MagneticButton>
             </div>
           </div>
 

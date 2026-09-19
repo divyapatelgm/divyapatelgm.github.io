@@ -64,10 +64,10 @@ export function Nav() {
           {/* Logo */}
           <a
             href="#top"
-            className="font-display font-bold text-lg tracking-tight hover:opacity-80 transition-opacity"
+            className="font-display font-extrabold text-lg tracking-tight hover:opacity-80 transition-opacity"
           >
-            <span className="text-gradient font-extrabold">Divya</span>
-            <span className="text-foreground ml-1">Patel G M</span>
+            <span className="text-gradient">Divya</span>
+            <span className="text-foreground ml-[3px]">Patel G M</span>
           </a>
 
           {/* Desktop Nav Links */}

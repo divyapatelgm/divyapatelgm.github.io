@@ -37,7 +37,7 @@ const projects: Project[] = [
     image: hostel,
     tags: ["Flutter", "PHP", "MySQL", "Firebase"],
     description:
-      "A full-stack hostel platform serving 1,000+ students at 99% uptime — role-based access for students, wardens and admins, QR entry/exit tracking, and automated gate-pass and grievance workflows that cut processing time by 60%.",
+      "A full-stack hostel platform serving 1,000+ students at 99% uptime - role-based access for students, wardens and admins, QR entry/exit tracking, and automated gate-pass and grievance workflows that cut processing time by 60%.",
     liveLink: "https://play.google.com/store",
     liveLabel: "Play Store",
     githubLink: profile,
@@ -50,7 +50,7 @@ const projects: Project[] = [
     image: students,
     tags: ["PHP", "MySQL", "JavaScript"],
     description:
-      "A team tracking tool that handles unlimited concurrent projects with per-developer task assignment — unlike single-project tools like Jira. An executive dashboard surfaces tasks assigned, completed and overdue for every employee.",
+      "A team tracking tool that handles unlimited concurrent projects with per-developer task assignment - unlike single-project tools like Jira. An executive dashboard surfaces tasks assigned, completed and overdue for every employee.",
     liveLink: "https://erp.gmit.info/gem/jira/",
     liveLabel: "View Project",
     githubLink: profile,
@@ -88,7 +88,7 @@ const projects: Project[] = [
     image: aiml,
     tags: ["React.js", "Vite", "Tailwind CSS"],
     description:
-      "The department's interactive home — academic programs, faculty and research presented through dynamic, fully responsive React components.",
+      "The department's interactive home - academic programs, faculty and research presented through dynamic, fully responsive React components.",
     liveLink: "https://gmuaiml.pages.dev/",
     liveLabel: "View Project",
     githubLink: profile,
@@ -173,7 +173,7 @@ export function Projects() {
               className="font-display font-bold text-4xl md:text-6xl leading-[1.02]"
             />
             <p className="mt-6 text-muted-foreground text-base leading-relaxed max-w-md">
-              Five builds spanning mobile, full-stack web and applied AI — each shipped or shipping to real users.
+              Five builds spanning mobile, full-stack web and applied AI - each shipped or shipping to real users.
             </p>
             <div className="mt-8 hidden lg:flex items-center gap-3 text-sm font-semibold text-foreground/70">
               <span className="flex h-10 w-10 items-center justify-center rounded-full border border-border">
@@ -314,9 +314,8 @@ function StatusChip({ status, ongoing }: { status: string; ongoing?: boolean }) 
   return (
     <span className="inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
       <span
-        className={`h-1.5 w-1.5 rounded-full ${
-          ongoing ? "bg-amber-400" : "bg-emerald-400"
-        } ${ongoing ? "" : "animate-pulse"}`}
+        className={`h-1.5 w-1.5 rounded-full ${ongoing ? "bg-amber-400" : "bg-emerald-400"
+          } ${ongoing ? "" : "animate-pulse"}`}
       />
       {status}
     </span>

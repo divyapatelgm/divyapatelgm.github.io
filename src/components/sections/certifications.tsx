@@ -5,7 +5,7 @@ import { SplitText } from "../ui/split-text";
 const items = [
   {
     icon: Trophy,
-    title: "Runner-up — Poster Presentation",
+    title: "Runner-up - Poster Presentation",
     subtitle: "National Level Tech Fest 2025",
     type: "Award",
     desc: "Recognized at a national tech symposium for outstanding project presentation and engineering execution.",
@@ -13,7 +13,7 @@ const items = [
   },
   {
     icon: Award,
-    title: "Runner-up — Poster Presentation",
+    title: "Runner-up - Poster Presentation",
     subtitle: "State Level Tech Fest 2024",
     type: "Award",
     desc: "Awarded at a state-level convention for presenting a dynamic software deployment project.",

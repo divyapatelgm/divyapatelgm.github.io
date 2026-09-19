@@ -64,10 +64,10 @@
 
   /* Effects */
   --gradient-primary: linear-gradient(135deg, oklch(0.72 0.22 45), oklch(0.78 0.22 55));
-  --gradient-radial: radial-gradient(circle at 50% 50%, oklch(0.72 0.22 45 / 35%), transparent 60%);
-  --gradient-hero: radial-gradient(ellipse at top, oklch(0.72 0.22 45 / 18%), transparent 55%),
-                   radial-gradient(ellipse at bottom right, oklch(0.55 0.18 280 / 12%), transparent 50%);
-  --shadow-glow: 0 0 60px -10px oklch(0.72 0.22 45 / 55%);
+  --gradient-radial: radial-gradient(circle at 50% 50%, oklch(0.72 0.22 45 / 15%), transparent 60%);
+  --gradient-hero: radial-gradient(ellipse at top, oklch(0.72 0.22 45 / 8%), transparent 55%),
+    radial-gradient(ellipse at bottom right, oklch(0.55 0.18 280 / 6%), transparent 50%);
+  --shadow-glow: 0 0 60px -10px oklch(0.72 0.22 45 / 35%);
   --shadow-elegant: 0 30px 80px -20px oklch(0 0 0 / 70%);
   --transition-smooth: cubic-bezier(0.65, 0, 0.35, 1);
 }
@@ -76,7 +76,9 @@
   * {
     border-color: var(--color-border);
   }
-  html, body {
+
+  html,
+  body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
@@ -85,34 +87,66 @@
     overflow-x: hidden;
     scroll-behavior: smooth;
   }
+
   body {
     cursor: none;
   }
+
   @media (max-width: 768px) {
-    body { cursor: auto; }
+    body {
+      cursor: auto;
+    }
   }
-  h1, h2, h3, h4 {
+
+  h1,
+  h2,
+  h3,
+  h4 {
     font-family: var(--font-display);
     letter-spacing: -0.02em;
   }
+
   ::selection {
     background: var(--primary);
     color: var(--primary-foreground);
   }
-  /* Slim custom scrollbar — Lenis smooths the motion */
+
+  /* Slim custom scrollbar - Lenis smooths the motion */
   ::-webkit-scrollbar {
     width: 6px;
     height: 6px;
   }
+
   ::-webkit-scrollbar-track {
     background: transparent;
   }
+
   ::-webkit-scrollbar-thumb {
     background: var(--color-border);
     border-radius: 999px;
   }
+
   ::-webkit-scrollbar-thumb:hover {
     background: var(--primary);
+  }
+}
+
+@layer components {
+
+  /* Unified section padding */
+  .section-py {
+    padding-top: clamp(4.5rem, 8vw, 8rem);
+    padding-bottom: clamp(4.5rem, 8vw, 8rem);
+  }
+
+  /* Unified section heading label (>=12px, orange accent) */
+  .section-label {
+    @apply inline-flex items-center gap-2 text-[12px] font-bold tracking-[0.2em] uppercase text-primary mb-4;
+  }
+
+  /* Shared card style */
+  .card-base {
+    @apply rounded-[1.5rem] glass p-8 md:p-10 border border-border text-left;
   }
 }
 
@@ -124,16 +158,14 @@
   color: transparent;
 }
 
-/* Animated sheen that sweeps across gradient text — signature heading effect */
+/* Animated sheen that sweeps across gradient text - signature heading effect */
 .text-shimmer {
-  background: linear-gradient(
-    100deg,
-    oklch(0.72 0.22 45) 20%,
-    oklch(0.92 0.15 70) 40%,
-    oklch(0.98 0.02 70) 50%,
-    oklch(0.92 0.15 70) 60%,
-    oklch(0.72 0.22 45) 80%
-  );
+  background: linear-gradient(100deg,
+      oklch(0.72 0.22 45) 20%,
+      oklch(0.92 0.15 70) 40%,
+      oklch(0.98 0.02 70) 50%,
+      oklch(0.92 0.15 70) 60%,
+      oklch(0.72 0.22 45) 80%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
@@ -196,39 +228,85 @@
 
 /* ---- Keyframes & custom animations ---- */
 @keyframes float {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-15px) rotate(2deg); }
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-15px) rotate(2deg);
+  }
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 30px -5px oklch(from var(--primary) l c h / 30%); }
-  50% { box-shadow: 0 0 60px 0 oklch(from var(--primary) l c h / 60%); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 30px -5px oklch(from var(--primary) l c h / 30%);
+  }
+
+  50% {
+    box-shadow: 0 0 60px 0 oklch(from var(--primary) l c h / 60%);
+  }
 }
 
 @keyframes gradient-shift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 @keyframes scroll-indicator {
-  0% { transform: translateY(0); opacity: 1; }
-  50% { opacity: 1; }
-  100% { transform: translateY(16px); opacity: 0; }
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(16px);
+    opacity: 0;
+  }
 }
 
 @keyframes shimmer {
-  to { background-position: 200% center; }
+  to {
+    background-position: 200% center;
+  }
 }
 
 @keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes aurora {
-  0% { transform: translate3d(0, 0, 0) rotate(0deg); }
-  50% { transform: translate3d(3%, -4%, 0) rotate(4deg); }
-  100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+
+  50% {
+    transform: translate3d(3%, -4%, 0) rotate(4deg);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
 }
 
 .animate-float {
@@ -270,13 +348,15 @@
   body {
     cursor: auto !important;
   }
+
   .custom-cursor {
     display: none !important;
   }
 }
 
-/* Respect users who prefer reduced motion — kill ambient looping animations */
+/* Respect users who prefer reduced motion - kill ambient looping animations */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -285,6 +365,7 @@
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
   }
+
   .text-shimmer {
     animation: none;
     background-position: 50% center;
