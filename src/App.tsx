@@ -47,7 +47,7 @@ function App() {
               <Hero />
               <About />
 
-              {/* Tech-stack marquee — a moving band that bridges About → Skills */}
+              {/* Tech-stack marquee - a moving band that bridges About → Skills */}
               <div className="relative border-y border-border/60 bg-surface/30 py-5 md:py-6">
                 <Marquee>
                   {marqueeItems.map((item) => (

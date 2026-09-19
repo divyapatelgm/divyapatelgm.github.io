@@ -100,7 +100,7 @@ export function Hero() {
 
       <motion.div
         style={{ scale, opacity, y }}
-        className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 lg:grid-cols-12 gap-12 px-6 md:px-10 pt-20 pb-20 items-center"
+        className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 lg:grid-cols-12 gap-12 px-6 md:px-10 pt-4 pb-20 items-center"
       >
         <div className="lg:col-span-7 space-y-7 text-left">
           {/* Subheading Badge */}
@@ -134,7 +134,7 @@ export function Hero() {
                 initial={{ y: "110%" }}
                 animate={{ y: 0 }}
                 transition={{ delay: 0.65, duration: 0.8, ease: [0.65, 0, 0.35, 1] }}
-                className="inline-block text-shimmer italic font-bold"
+                className="inline-block text-shimmer italic font-bold pr-4"
               >
                 Divya Patel G M
               </motion.span>
@@ -175,14 +175,12 @@ export function Hero() {
             <MagneticButton as="a" href="#contact" variant="secondary">
               Contact Me
             </MagneticButton>
-            <MagneticButton
-              as="a"
+            <a
               href="#about"
-              variant="ghost"
-              className="text-xs uppercase tracking-widest text-muted-foreground hover:text-foreground"
+              className="px-4 text-xs font-bold uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors"
             >
               Learn More
-            </MagneticButton>
+            </a>
           </motion.div>
         </div>
 

@@ -5,7 +5,7 @@ interface TiltCardProps {
   children: ReactNode;
   /** Classes for the visual card that tilts (bg, border, radius, padding…). */
   className?: string;
-  /** Classes for the outer wrapper — use for grid placement (col-span, h-full…). */
+  /** Classes for the outer wrapper - use for grid placement (col-span, h-full…). */
   wrapperClassName?: string;
   /** Max tilt in degrees. */
   max?: number;

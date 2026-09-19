@@ -5,15 +5,15 @@ import { SplitText } from "../ui/split-text";
 const role = {
   title: "Software Developer Intern",
   org: "GEM Ventures, Davangere",
-  period: "Feb 2026 — Present",
+  period: "Feb 2026 - Present",
   summary:
-    "Shipping production software end-to-end — from Flutter mobile apps on the Play Store & App Store to internal tooling that keeps teams in sync. I own features from design through deployment for products serving thousands of daily users.",
+    "Shipping production software end-to-end from Flutter mobile apps on the Play Store & App Store to internal tooling that keeps teams in sync. I own features from design through deployment for products serving thousands of daily users.",
   tags: ["Flutter", "PHP", "MySQL", "Firebase", "REST APIs", "JavaScript"],
 };
 
 const stats = [
   { value: "5,000+", label: "GMU Connect users served" },
-  { value: "2", label: "Stores shipped to — Play & App" },
+  { value: "2", label: "Stores shipped to - Play & App" },
   { value: "60%", label: "Faster gate-pass workflow" },
 ];
 
@@ -21,7 +21,7 @@ const highlights = [
   {
     icon: Smartphone,
     title: "Flutter Hostel Management System",
-    text: "Led development from design through deployment on the Play Store and App Store — role-based access, QR gate passes, and grievance workflows.",
+    text: "Led development from design through deployment on the Play Store and App Store - role-based access, QR gate passes, and grievance workflows.",
   },
   {
     icon: Library,
@@ -37,14 +37,14 @@ const highlights = [
 
 export function Experience() {
   return (
-    <section id="experience" className="relative py-20 md:py-28 px-6 md:px-10 bg-background overflow-hidden">
+    <section id="experience" className="relative py-20 md:py-20 px-6 md:px-10 bg-background overflow-hidden">
       <div
         className="absolute inset-0 opacity-[0.15] pointer-events-none"
         style={{ background: "var(--gradient-radial)" }}
       />
       <div className="relative mx-auto max-w-7xl">
         {/* Section Heading */}
-        <div className="mb-14 md:mb-20 text-left max-w-3xl">
+        <div className="mb-14 md:mb-10 text-left max-w-3xl">
           <div className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.3em] uppercase text-primary mb-4">
             <span className="h-px w-8 bg-primary" />
             Experience
@@ -101,13 +101,13 @@ export function Experience() {
               </div>
 
               {/* Stats */}
-              <div className="mt-9 grid grid-cols-3 gap-3 border-t border-border pt-7">
+              <div className="mt-8 grid grid-cols-3 gap-3 border-t border-border pt-7">
                 {stats.map((s) => (
                   <div key={s.label}>
                     <div className="font-display text-2xl md:text-3xl font-black text-gradient leading-none">
                       {s.value}
                     </div>
-                    <div className="mt-1.5 text-[10px] md:text-[11px] text-muted-foreground leading-snug">
+                    <div className="mt-1.5 text-[10px] md:text-[10px] text-muted-foreground leading-snug">
                       {s.label}
                     </div>
                   </div>

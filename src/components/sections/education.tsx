@@ -14,7 +14,7 @@ const coursework = [
 const facts = [
   { icon: CalendarDays, label: "Duration", value: "Sep 2023 – Jun 2027" },
   { icon: MapPin, label: "Location", value: "Davangere, Karnataka" },
-  { icon: GraduationCap, label: "Degree", value: "B.E. — AI & ML" },
+  { icon: GraduationCap, label: "Degree", value: "B.E. - AI & ML" },
 ];
 
 export function Education() {
@@ -63,8 +63,8 @@ export function Education() {
                 GM Institute of Technology, Davangere
               </div>
               <p className="mt-5 text-muted-foreground text-sm md:text-base leading-relaxed max-w-2xl">
-                Studying the algorithms and systems that turn data into decisions — deep neural
-                networks, machine-learning paradigms, data-mining structures, and LLM integration —
+                Studying the algorithms and systems that turn data into decisions - deep neural
+                networks, machine-learning paradigms, data-mining structures, and LLM integration -
                 reinforced by hands-on model building and full-stack web deployments.
               </p>
 
@@ -99,7 +99,6 @@ export function Education() {
                 <div className="mt-2 font-display text-5xl font-black text-gradient leading-none">
                   8.26
                 </div>
-                <div className="mt-1 text-xs font-semibold text-muted-foreground">out of 10</div>
               </div>
 
               <div className="space-y-2.5">

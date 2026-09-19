@@ -38,8 +38,28 @@ export function SmoothScroll({ children }: { children: ReactNode }) {
     gsap.ticker.add(tickerFn);
     gsap.ticker.lagSmoothing(0);
 
+    // Intercept all anchor clicks to prevent hash in URL while preserving smooth scroll
+    const handleAnchorClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      const anchor = target.closest("a");
+      
+      if (anchor && anchor.hash && anchor.hash.startsWith("#")) {
+        // Ensure it's a link to the current page
+        if (anchor.pathname === window.location.pathname) {
+          e.preventDefault();
+          const id = anchor.hash;
+          if (id && id !== "#") {
+            lenis.scrollTo(id);
+          }
+        }
+      }
+    };
+
+    document.addEventListener("click", handleAnchorClick);
+
     return () => {
       mounted = false;
+      document.removeEventListener("click", handleAnchorClick);
       if (tickerFn) {
         gsap.ticker.remove(tickerFn);
       }

@@ -101,7 +101,7 @@
   <!-- comments -->
   <g>
     <circle cx="778" cy="372" r="3.5" fill="#f2903c"/>
-    <text x="796" y="377" fill="#d4d7dd" font-size="15">Avoid MD5 — use a salted hash.</text>
+    <text x="796" y="377" fill="#d4d7dd" font-size="15">Avoid MD5 - use a salted hash.</text>
     <line x1="768" y1="398" x2="1136" y2="398" stroke="#ffffff" stroke-opacity="0.06"/>
 
     <circle cx="778" cy="430" r="3.5" fill="#f2903c"/>

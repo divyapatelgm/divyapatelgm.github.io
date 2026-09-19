@@ -2,7 +2,7 @@ import { motion, useScroll, useSpring } from "framer-motion";
 
 /**
  * Slim gradient bar pinned to the very top of the viewport that fills
- * as the visitor scrolls the page — a premium, low-cost "alive" cue.
+ * as the visitor scrolls the page - a premium, low-cost "alive" cue.
  */
 export function ScrollProgress() {
   const { scrollYProgress } = useScroll();
