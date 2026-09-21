@@ -167,19 +167,19 @@ export function Hero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.15, duration: 0.8 }}
-            className="flex flex-wrap items-center gap-4 pt-2"
+            className="flex items-center gap-3 sm:gap-4 pt-2 w-full"
           >
-            <MagneticButton as="a" href="#work" variant="primary">
+            <MagneticButton as="a" href="#work" variant="primary" className="flex-1 sm:flex-none">
               View Projects
             </MagneticButton>
-            <MagneticButton as="a" href="#contact" variant="secondary">
+            <MagneticButton as="a" href="#contact" variant="secondary" className="flex-1 sm:flex-none">
               Contact Me
             </MagneticButton>
             <a
               href="#about"
-              className="px-4 text-xs font-bold uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors"
+              className="hidden sm:inline-block px-4 text-xs font-bold uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors"
             >
-              Learn More
+              About Me
             </a>
           </motion.div>
         </div>

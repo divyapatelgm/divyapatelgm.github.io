@@ -183,7 +183,7 @@ export function Contact() {
 
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-6">
               <div className="text-xs text-muted-foreground font-semibold">
-                {loading ? "Sending…" : "Replies within 24 hours"}
+                {loading ? "Sending…" : ""}
               </div>
               <MagneticButton type="submit" disabled={loading}>
                 {loading ? "Sending…" : "Send Message →"}

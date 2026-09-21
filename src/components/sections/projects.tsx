@@ -259,28 +259,28 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             ))}
           </div>
 
-          <div className="mt-7 flex flex-wrap gap-3">
+          <div className="mt-7 flex flex-row items-center gap-2 sm:gap-3 w-full">
             {project.ongoing ? (
-              <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-primary">
-                <Loader className="h-4 w-4 animate-spin [animation-duration:3s]" /> In progress
+              <span className="flex-1 inline-flex items-center justify-center gap-1.5 sm:gap-2 rounded-full border border-primary/30 bg-primary/10 px-2 sm:px-5 py-2.5 text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-primary">
+                <Loader className="h-3.5 w-3.5 sm:h-4 sm:w-4 animate-spin [animation-duration:3s]" /> In progress
               </span>
             ) : (
               <a
                 href={project.liveLink}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-primary-foreground hover:shadow-[0_0_30px_-5px_var(--primary)] transition-shadow duration-300"
+                className="flex-1 inline-flex items-center justify-center gap-1.5 sm:gap-2 rounded-full bg-primary px-2 sm:px-5 py-2.5 text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-primary-foreground hover:shadow-[0_0_30px_-5px_var(--primary)] transition-shadow duration-300"
               >
-                {project.liveLabel} <ArrowUpRight className="h-4 w-4" />
+                <span className="truncate">{project.liveLabel}</span> <ArrowUpRight className="h-3.5 w-3.5 sm:h-4 sm:w-4 flex-shrink-0" />
               </a>
             )}
             <a
               href={project.githubLink}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-surface-elevated/20 px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-foreground hover:bg-surface-elevated transition-colors duration-300"
+              className="flex-1 inline-flex items-center justify-center gap-1.5 sm:gap-2 rounded-full border border-border bg-surface-elevated/20 px-2 sm:px-5 py-2.5 text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-foreground hover:bg-surface-elevated transition-colors duration-300"
             >
-              <Github className="h-4 w-4" /> Code
+              <Github className="h-3.5 w-3.5 sm:h-4 sm:w-4 flex-shrink-0" /> <span className="truncate">Code</span>
             </a>
           </div>
         </div>

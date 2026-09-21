@@ -40,7 +40,7 @@ export function MagneticButton({
   };
 
   const base =
-    "relative inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-medium text-sm tracking-wide transition-[background,color,box-shadow,border-color] duration-500 will-change-transform cursor-pointer select-none";
+    "relative inline-flex items-center justify-center gap-2 px-4 py-3 sm:px-8 sm:py-4 rounded-full font-medium text-xs sm:text-sm tracking-wide transition-[background,color,box-shadow,border-color] duration-500 will-change-transform cursor-pointer select-none";
   
   const styles =
     variant === "primary"
